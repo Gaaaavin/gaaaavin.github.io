@@ -1,0 +1,256 @@
+body {
+    margin: 0
+}
+
+div.link-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    display: inline;
+}
+
+img {
+    border-style: none;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: auto;
+    width: 160px;
+}
+
+.responsive {
+    max-width: 25%;
+    height: auto;
+}
+
+a.link-icon {
+    transition-duration: 0.4s;
+}
+
+a.link-icon:link,
+a.link-icon:visited,
+a.link-icon:hover,
+a.link-icon:active {
+    text-decoration: none;
+}
+
+.header {
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.external_links {
+    margin: auto;
+    text-align: center;
+}
+
+a.link-icon {
+    font-size: 3.2vw;
+}
+
+a.link-icon:link,
+a.link-icon:visited {
+    color: #aaaaaa
+}
+
+a.fa-github:hover,
+a.fa-github:active {
+    color: #171515
+}
+
+a.fa-linkedin-in:hover,
+a.fa-linkedin-in:active {
+    color: #0072b1;
+}
+
+a.ai-google-scholar:hover,
+a.fa-scholar:active {
+    color: #a2c4fd
+}
+
+a.fa-envelope:hover,
+a.fa-envelope:active {
+    color: #193252
+}
+
+div.content,
+div.directory {
+    margin-left: 15%;
+    margin-right: 15%;
+    line-height: 1.8;
+}
+
+div.directory {
+    margin-top: 2vw;
+    margin-bottom: 6vw;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    color: white;
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Set button color */
+button.about {
+    background-color: white;
+    color: #de6d77;
+    border: 2px solid #de6d77;
+}
+
+button.about:hover {
+    background-color: #de6d77;
+    color: white;
+}
+
+button.publications {
+    background-color: white;
+    color: #99c27c;
+    border: 2px solid #99c27c;
+}
+
+button.publications:hover {
+    background-color: #99c27c;
+    color: white;
+}
+
+button.projects {
+    background-color: white;
+    color: #e4bf7f;
+    border: 2px solid #e4bf7f;
+}
+
+button.projects:hover {
+    background-color: #e4bf7f;
+    color: white;
+}
+
+button.honors-awards {
+    background-color: white;
+    color: #65b0ed;
+    border: 2px solid #65b0ed;
+}
+
+button.honors-awards:hover {
+    background-color: #65b0ed;
+    color: white;
+}
+
+button.more {
+    background-color: white;
+    color: #c57bdb;
+    border: 2px solid #c57bdb;
+}
+
+button.more:hover {
+    background-color: #c57bdb;
+    color: white;
+}
+
+/* End button color */
+
+/* Start link color */
+
+a.about-link:link, a.about-link:visited {
+    color: #de6d77;
+}
+
+a.about-link:hover, a.about-link:active {
+    color: #fe9d97;
+}
+
+a.publication-link:link, a.publication-link:visited {
+    color: #99c27c;
+}
+
+a.publication-link:hover, a.publication-link:active {
+    color: #a9e29c;
+}
+
+a.project-link:link, a.project-link:visited, a.project-mentor-link:link, a.project-mentor-link:visited {
+    color: #e4bf7f;
+}
+
+a.project-link:hover, a.project-link:active, a.project-mentor-link:hover, a.project-mentor-link:active {
+    color: #ffdf9f;
+}
+
+a.more-link:link, a.more-link:visited {
+    color: #c57bdb;
+}
+
+a.more-link:hover, a.more-link:active {
+    color: #e59bfb
+}
+
+/* End link color */
+
+span.date {
+    float: right;
+    color: #aaaaaa;
+}
+
+div.publications,
+div.projects,
+div.honors-awards,
+div.more {
+    display: none;
+    transition-duration: 1s;
+}
+
+div.footer {
+    height: 40vh;
+}
+
+@media screen and (min-width: 601px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    a.link-icon {
+        font-size: 28px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    a.link-icon {
+        font-size: 16px;
+    }
+
+    span.date {
+        display: none;
+    }
+
+    .button {
+        height: 25px;
+        width: 50vw;
+    }
+}
