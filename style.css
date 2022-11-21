@@ -1,5 +1,5 @@
 body {
-    margin: 0
+    margin: auto;
 }
 
 div.link-icon {
@@ -77,14 +77,20 @@ a.fa-envelope:active {
 
 div.content,
 div.directory {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: auto;
     line-height: 1.8;
+    max-width: 1000px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+div.content {
+    max-width: 800px;
 }
 
 div.directory {
     margin-top: 2vw;
-    margin-bottom: 6vw;
+    margin-bottom: 4vw;
     text-align: center;
 }
 
@@ -92,7 +98,7 @@ div.directory {
     border: none;
     color: white;
     height: 40px;
-    width: 160px;
+    width: 150px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
