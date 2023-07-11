@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xinhao Liu | 刘歆昊</title>
+    <link>https://gaaaavin.github.io/</link>
+      <atom:link href="https://gaaaavin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <description>Xinhao Liu | 刘歆昊</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://gaaaavin.github.io/media/icon_hu6fe5b7c0bb16acefc41d43e354cf7987_1350_512x512_fill_lanczos_center_3.png</url>
+      <title>Xinhao Liu | 刘歆昊</title>
+      <link>https://gaaaavin.github.io/</link>
+    </image>
+    
+    <item>
+      <title>SSCBench: A Large-Scale 3D Semantic Scene Completion Benchmark for Autonomous Driving</title>
+      <link>https://gaaaavin.github.io/publication/li-2023-sscbench/</link>
+      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/publication/li-2023-sscbench/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DeepMapping2: Self-Supervised Large-Scale LiDAR Map Optimization</title>
+      <link>https://gaaaavin.github.io/publication/chen-2023-deepmapping-2/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/publication/chen-2023-deepmapping-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Benchmarking Adaptive Methods for SGD</title>
+      <link>https://gaaaavin.github.io/project/benchmar-adaptive-sgd/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/project/benchmar-adaptive-sgd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mask-aware Face Recognition: An Implicit Approach</title>
+      <link>https://gaaaavin.github.io/project/mask-aware-face-recognition/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/project/mask-aware-face-recognition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Understanding State-of-the-Art Off-Policy Control</title>
+      <link>https://gaaaavin.github.io/project/off-policy-control/</link>
+      <pubDate>Tue, 20 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/project/off-policy-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self-supervised visual place recognition by mining temporal and feature neighborhoods</title>
+      <link>https://gaaaavin.github.io/publication/chen-2022-self/</link>
+      <pubDate>Fri, 19 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/publication/chen-2022-self/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Self-supervised Learning for Object Detection</title>
+      <link>https://gaaaavin.github.io/project/self-supervised-object-detection/</link>
+      <pubDate>Tue, 17 May 2022 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/project/self-supervised-object-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gaaaavin.github.io/admin/config.yml</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://gaaaavin.github.io/admin/config.yml</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
