@@ -439,6 +439,10 @@ h4 {
   background: radial-gradient(circle, rgba(75, 91, 255, 0.2), transparent);
 }
 
+:root[data-theme='dark'] .pub-figure {
+  background: radial-gradient(circle, rgba(75, 91, 255, 0.2), transparent), #ffffff;
+}
+
 .pub-figure img,
 .pub-figure video {
   width: 100%;
@@ -456,13 +460,17 @@ h4 {
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   color: var(--accent);
-  text-transform: uppercase;
   margin: 0;
 }
 
 .pub-authors {
   margin: 0;
   color: var(--text-soft);
+}
+
+.pub-authors b {
+  font-weight: 700;
+  color: var(--text);
 }
 
 .pub-links {
