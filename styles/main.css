@@ -487,6 +487,34 @@ h4 {
   color: var(--text-soft);
 }
 
+.back-to-top {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.back-to-top svg {
+  width: 18px;
+  height: 18px;
+}
+
 @media (max-width: 900px) {
   .profile {
     grid-template-columns: 1fr;

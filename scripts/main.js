@@ -44,6 +44,9 @@ window.addEventListener('scroll', () => {
 sections.forEach((section) => observer.observe(section));
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+const lastUpdate = new Date();
+const options = { year: 'numeric', month: 'long' };
+document.querySelector('#lastUpdate').textContent = lastUpdate.toLocaleDateString('en-US', options);
 
 const themeButtons = document.querySelectorAll('.theme-toggle');
 const root = document.documentElement;
