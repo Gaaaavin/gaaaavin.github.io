@@ -8,6 +8,7 @@
   --accent-strong: #c889ff;
   --border: rgba(15, 23, 42, 0.12);
   --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  --theme-transition: 800ms cubic-bezier(.4, 0, .2, 1);
 }
 
 :root[data-theme='dark'] {
@@ -47,8 +48,10 @@ body {
   margin: 0;
   font-family: 'Inter', 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
-  background: linear-gradient(120deg, rgba(75, 91, 255, 0.08), transparent 55%), var(--bg);
+  /* Subtle single linear gradient with high transparency */
+  background: linear-gradient(120deg, rgba(75, 91, 255, 0.3), transparent 55%), var(--bg);
   line-height: 1.6;
+  transition: background-color var(--theme-transition), color var(--theme-transition);
 }
 
 img {
@@ -84,6 +87,7 @@ main {
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
   z-index: 20;
+  transition: background-color var(--theme-transition), border-color var(--theme-transition);
 }
 
 :root[data-theme='dark'] .site-header {
@@ -165,7 +169,7 @@ nav a.active {
   background: transparent;
   color: var(--text);
   cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color var(--theme-transition);
 }
 
 .theme-icon {
@@ -247,6 +251,7 @@ h4 {
   background: var(--bg-muted);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  transition: background-color var(--theme-transition), border-color var(--theme-transition), box-shadow var(--theme-transition);
 }
 
 .profile-identity img {
@@ -307,7 +312,7 @@ h4 {
   padding: 0.65rem 1.4rem;
   font-weight: 600;
   border: 1px solid transparent;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, color var(--theme-transition), border-color var(--theme-transition);
 }
 
 .btn.primary {
@@ -342,6 +347,7 @@ h4 {
   border: 1px solid var(--border);
   font-size: 0.9rem;
   color: var(--text-soft);
+  transition: background-color var(--theme-transition), color var(--theme-transition), border-color var(--theme-transition);
 }
 
 .social-list svg {
@@ -437,6 +443,7 @@ h4 {
   border-radius: 20px;
   overflow: hidden;
   background: radial-gradient(circle, rgba(75, 91, 255, 0.2), transparent);
+  transition: background-color var(--theme-transition), background 400ms ease;
 }
 
 :root[data-theme='dark'] .pub-figure {
@@ -484,6 +491,7 @@ h4 {
   border-radius: 999px;
   border: 1px solid var(--border);
   font-size: 0.85rem;
+  transition: background-color var(--theme-transition), color var(--theme-transition), border-color var(--theme-transition);
 }
 
 .visitor-map .map-frame {
@@ -543,5 +551,18 @@ h4 {
 
   .news-list li {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .site-header,
+  .profile-identity,
+  .btn,
+  .pub-figure,
+  .pub-links a,
+  .social-list a,
+  .theme-toggle {
+    transition: none !important;
   }
 }
