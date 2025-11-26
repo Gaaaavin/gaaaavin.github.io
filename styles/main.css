@@ -26,6 +26,18 @@
   box-sizing: border-box;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
@@ -112,6 +124,9 @@ nav a.active {
   border: none;
   flex-direction: column;
   gap: 5px;
+  position: relative;
+  z-index: 50;
+  cursor: pointer;
 }
 
 .nav-toggle span {
@@ -119,6 +134,19 @@ nav a.active {
   width: 22px;
   height: 2px;
   background: var(--text);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .nav-theme {
@@ -154,7 +182,10 @@ nav a.active {
 @media (max-width: 720px) {
   nav ul {
     position: fixed;
-    inset: 0 0 0 auto;
+    top: 0;
+    right: 0;
+    height: 50vh;
+    height: 50dvh;
     width: min(280px, 75vw);
     background: var(--bg);
     flex-direction: column;
@@ -163,6 +194,8 @@ nav a.active {
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.22);
     transform: translateX(100%);
     transition: transform 0.3s ease;
+    z-index: 40;
+    overflow-y: auto;
   }
 
   nav ul.open {
