@@ -1,26 +1,42 @@
 :root {
   color-scheme: light;
-  --bg: #f7f8fb;
+  /* Catppuccin Latte */
+  --bg: #eff1f5;
   --bg-muted: #ffffff;
-  --text: #0f172a;
-  --text-soft: #4b566f;
-  --accent: #4b5bff;
-  --accent-strong: #c889ff;
-  --border: rgba(15, 23, 42, 0.12);
-  --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+  --text: #4c4f69;
+  --text-soft: #6c6f85;
+  --accent: #7287fd;        /* Lavender */
+  --accent-strong: #8839ef; /* Mauve */
+  --border: rgba(76, 79, 105, 0.15);
+  --shadow: 0 20px 50px rgba(76, 79, 105, 0.12);
   --theme-transition: 800ms cubic-bezier(.4, 0, .2, 1);
+
+  --clr-peach: #fe640b;
+  --clr-green: #40a02b;
+  --clr-teal: #179299;
+  --clr-pink: #ea76cb;
+  --clr-sky: #04a5e5;
+  --clr-yellow: #df8e1d;
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
+  /* Catppuccin Macchiato */
   --bg: #05050b;
   --bg-muted: #0f1220;
-  --text: #f6f7fb;
-  --text-soft: #9aa6ca;
+  --text: #cad3f5;
+  --text-soft: #a5adcb;
   --accent: #8a98ff;
   --accent-strong: #f09eff;
-  --border: rgba(246, 247, 251, 0.16);
+  --border: rgba(202, 211, 245, 0.12);
   --shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+
+  --clr-peach: #f5a97f;
+  --clr-green: #a6da95;
+  --clr-teal: #8bd5ca;
+  --clr-pink: #f5bde6;
+  --clr-sky: #91d7e3;
+  --clr-yellow: #eed49f;
 }
 
 * {
@@ -48,10 +64,13 @@ body {
   margin: 0;
   font-family: 'Inter', 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--text);
-  /* Subtle single linear gradient with high transparency */
-  background: linear-gradient(120deg, rgba(75, 91, 255, 0.3), transparent 55%), var(--bg);
+  background: linear-gradient(120deg, rgba(114, 135, 253, 0.22), transparent 55%), var(--bg);
   line-height: 1.6;
   transition: background-color var(--theme-transition), color var(--theme-transition);
+}
+
+[data-theme='dark'] body {
+  background: linear-gradient(120deg, rgba(75, 91, 255, 0.3), transparent 55%), var(--bg);
 }
 
 img {
@@ -83,7 +102,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 18px min(5vw, 3rem);
-  background: rgba(247, 248, 251, 0.85);
+  background: rgba(239, 241, 245, 0.85);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
   z-index: 20;
@@ -325,6 +344,12 @@ h4 {
   color: var(--text);
 }
 
+.btn.ghost:hover {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 .btn:hover {
   transform: translateY(-2px);
 }
@@ -411,7 +436,8 @@ h4 {
 }
 
 .news-month {
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--clr-peach);
 }
 
 .news-month::before {
@@ -425,7 +451,7 @@ h4 {
 .pub-list {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   margin-top: 1.5rem;
 }
 
@@ -433,8 +459,18 @@ h4 {
   display: grid;
   grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
   gap: 28px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--border);
+  padding: 20px;
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: background-color var(--theme-transition), border-color var(--theme-transition), box-shadow var(--theme-transition), transform 0.25s ease;
+}
+
+.pub-item:hover {
+  transform: scale(1.02);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  box-shadow: 0 28px 60px rgba(75, 91, 255, 0.18);
 }
 
 .pub-figure {
@@ -442,12 +478,12 @@ h4 {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  background: radial-gradient(circle, rgba(75, 91, 255, 0.2), transparent);
+  background: radial-gradient(circle, rgba(114, 135, 253, 0.18), transparent);
   transition: background-color var(--theme-transition), background 400ms ease;
 }
 
 :root[data-theme='dark'] .pub-figure {
-  background: radial-gradient(circle, rgba(75, 91, 255, 0.2), transparent), #ffffff;
+  background: radial-gradient(circle, rgba(183, 189, 248, 0.15), transparent), #ffffff;
 }
 
 .pub-figure img,
@@ -464,9 +500,16 @@ h4 {
 }
 
 .pub-venue {
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
+  align-self: flex-start;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
   margin: 0;
 }
 
@@ -477,7 +520,7 @@ h4 {
 
 .pub-authors b {
   font-weight: 700;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .pub-links {
@@ -491,7 +534,48 @@ h4 {
   border-radius: 999px;
   border: 1px solid var(--border);
   font-size: 0.85rem;
-  transition: background-color var(--theme-transition), color var(--theme-transition), border-color var(--theme-transition);
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.pub-links a:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.pub-links .link-paper {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.pub-links .link-project {
+  color: var(--clr-peach);
+  background: color-mix(in srgb, var(--clr-peach) 10%, transparent);
+  border-color: color-mix(in srgb, var(--clr-peach) 35%, transparent);
+}
+
+.pub-links .link-code {
+  color: var(--clr-green);
+  background: color-mix(in srgb, var(--clr-green) 10%, transparent);
+  border-color: color-mix(in srgb, var(--clr-green) 35%, transparent);
+}
+
+.pub-links .link-dataset {
+  color: var(--clr-teal);
+  background: color-mix(in srgb, var(--clr-teal) 10%, transparent);
+  border-color: color-mix(in srgb, var(--clr-teal) 35%, transparent);
+}
+
+.pub-links .link-model {
+  color: var(--accent-strong);
+  background: color-mix(in srgb, var(--accent-strong) 10%, transparent);
+  border-color: color-mix(in srgb, var(--accent-strong) 35%, transparent);
+}
+
+.pub-links .link-benchmark {
+  color: var(--clr-sky);
+  background: color-mix(in srgb, var(--clr-sky) 10%, transparent);
+  border-color: color-mix(in srgb, var(--clr-sky) 35%, transparent);
 }
 
 .visitor-map .map-frame {
