@@ -17,6 +17,7 @@
   --clr-pink: #ea76cb;
   --clr-sky: #04a5e5;
   --clr-yellow: #df8e1d;
+  --clr-red: #d20f39;
 }
 
 :root[data-theme='dark'] {
@@ -37,6 +38,7 @@
   --clr-pink: #f5bde6;
   --clr-sky: #91d7e3;
   --clr-yellow: #eed49f;
+  --clr-red: #ed8796;
 }
 
 * {
